@@ -132,7 +132,7 @@ def test():
         clock = pygame.time.Clock()       
         size_angle = 0
         size_angle_step = math.pi / 720
-        background_gradient = GradientBackground(surface)
+        background_gradient = GradientBackground(surface.get_size())
         while True:
             clock.tick(fps)
             events = pygame.event.get()  
@@ -157,9 +157,10 @@ def test():
                 cube.update()
             pygame.display.flip()
     except KeyboardInterrupt:
-        print 'shutting down'
+        print('shutting down')
 
 if __name__ == '__main__':
-    from GradientBackground import GradientBackground as GradientBackground
+    #sys.path.append("./effects")
+    from effects.GradientBackground import BackgroundGradient as GradientBackground
     test()
 

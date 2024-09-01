@@ -3,7 +3,7 @@
 import sys
 import pygame
 # own modules
-from ColorGradient import ColorGradient as ColorGradient
+from effects.ColorGradient import ColorGradient as ColorGradient
 
 
 FPS = 50
